@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./CarDetail.module.css";
-import { MdLocationOn, MdAttachMoney } from "react-icons/md";
+import {
+  MdLocationOn,
+  MdAttachMoney,
+  MdKeyboardArrowLeft,
+} from "react-icons/md";
 import Button from "@/components/modules/Button/Button";
+import { useRouter } from "next/router";
 
 const CarDetail = ({ data }) => {
-  const {
-    id,
-    name,
-    model,
-    year,
-    distance,
-    location,
-    price,
-    image,
-    description,
-  } = data;
+  const { name, model, year, distance, location, price, image, description } =
+    data;
+
+  const detailRef = useRef();
+
+  const router = useRouter();
+
+  const backHandler = () => {
+    router.back();
+  };
+
+  useEffect(() => {
+    detailRef.current.parentElement.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div className={styles.detailWraper}>
+    <div className={styles.detailWraper} ref={detailRef}>
+      <div className={styles.backButton}>
+        <Button
+          text="Back"
+          color="#fff"
+          bgColor="#262525"
+          clicked={backHandler}
+          icon={<MdKeyboardArrowLeft color="#fff" size={18} />}
+        />
+      </div>
       <img src={image} alt={name} />
       <div className={styles.name}>{name}</div>
       <ul className={styles.infoList}>
@@ -54,7 +71,7 @@ const CarDetail = ({ data }) => {
           <MdAttachMoney size={18} color="#fff" />
           Price
         </div>
-        <div>${price.toLocaleString()}</div>
+        <div>${price && price.toLocaleString()}</div>
       </div>
       <Button
         text="Buy"
