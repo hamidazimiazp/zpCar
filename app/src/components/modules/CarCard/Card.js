@@ -7,7 +7,7 @@ const Card = ({ data }) => {
   const { id, name, model, year, distance, location, price, image } = data;
 
   return (
-    <Link href={`/car/${id}`} className={styles.wrapper}>
+    <Link href={`/cars/${id}`} className={styles.wrapper}>
       <div className={styles.image}>
         <img src={image} />
         <div className={styles.details}>
