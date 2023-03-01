@@ -1,0 +1,109 @@
+.detailWraper {
+  padding: 50px 0;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.detailWraper img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.name {
+  text-align: left;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.infoList {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #262525;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.infoList li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+}
+.infoList li span:last-of-type {
+  font-size: 13px;
+}
+.infoList li:last-of-type {
+  border: none;
+}
+.locationCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #262525;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 100%;
+}
+.locationCard > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.locationCard div:last-of-type {
+  font-size: 13px;
+}
+.description {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #262525;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 100%;
+}
+.description div {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.description p {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: justify;
+}
+.price {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #262525;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.backButton {
+  width: 100px;
+}
+@media screen and (max-width: 850px) {
+  .detailWraper {
+    width: 90%;
+  }
+}
