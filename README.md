@@ -1,3 +1,3 @@
 # zpCar
 
-## a simple project for working with next.js 
+## a simple project for working with next.js routing

@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.main {
+  height: calc(100vh - 112px);
+  background-color: #1f1f1f;
+  width: 100%;
+  overflow: scroll;
+}

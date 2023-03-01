@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  height: 56px;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
