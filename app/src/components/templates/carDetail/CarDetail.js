@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CarDetail.module.css";
 import { MdLocationOn, MdAttachMoney } from "react-icons/md";
+import Button from "@/components/modules/Button/Button";
 
 const CarDetail = ({ data }) => {
   const {
@@ -55,6 +56,13 @@ const CarDetail = ({ data }) => {
         </div>
         <div>${price.toLocaleString()}</div>
       </div>
+      <Button
+        text="Buy"
+        color="#fff"
+        bgColor="#111"
+        clicked={() => {}}
+        icon={<MdAttachMoney color="#fff" size={18} />}
+      />
     </div>
   );
 };
