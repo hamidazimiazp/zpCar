@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import getCars from "@/data/carsData";
+import Card from "@/components/modules/CarCard/Card";
+import styles from "./carList.module.css";
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
@@ -9,10 +11,10 @@ const CarList = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.carList}>
       {cars &&
         cars.map((car) => {
-          return <p key={car.id}>{car.name}</p>;
+          return <Card key={car.id} data={car} />;
         })}
     </div>
   );
