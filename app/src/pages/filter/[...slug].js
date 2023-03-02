@@ -2,18 +2,15 @@ import Button from "@/components/modules/Button/Button";
 import CarList from "@/components/templates/carList/carList";
 import getCars from "@/data/carsData";
 import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import styles from "./cars.module.css";
+import styles from "./filter.module.css";
 
-const index = () => {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    setCars(getCars());
-  }, []);
-
+const Filter = () => {
   const router = useRouter();
+
+  const [min, max] = router.query.slug || [];
+  const data = getCars().filter((car) => car.price >= min && car.price <= max);
 
   const backHandler = () => {
     router.back();
@@ -30,10 +27,9 @@ const index = () => {
           icon={<MdKeyboardArrowLeft color="#fff" size={18} />}
         />
       </div>
-
-      <CarList data={cars} />
+      {data && <CarList data={data} />}
     </div>
   );
 };
 
-export default index;
+export default Filter;
