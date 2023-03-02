@@ -3,17 +3,11 @@ import getCars from "@/data/carsData";
 import Card from "@/components/modules/CarCard/Card";
 import styles from "./carList.module.css";
 
-const CarList = () => {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    setCars(getCars());
-  }, []);
-
+const CarList = ({ data }) => {
   return (
     <div className={styles.carList}>
-      {cars &&
-        cars.map((car) => {
+      {data &&
+        data.map((car) => {
           return <Card key={car.id} data={car} />;
         })}
     </div>
