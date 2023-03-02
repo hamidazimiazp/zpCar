@@ -1,0 +1,57 @@
+.queryWrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 450px;
+  margin: 20px auto 0 auto;
+  height: max-content;
+}
+.queryWrapper > div input {
+  all: unset;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 10px 0;
+  width: 300px;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+  font-weight: 400;
+}
+.queryWrapper > div input:last-of-type {
+  margin-bottom: 0;
+}
+.queryWrapper div:last-of-type {
+  width: 100%;
+  height: 100px;
+}
+.queryWrapper button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 24px;
+}
+@media screen and (max-width: 850px) {
+  .queryWrapper {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  .queryWrapper div:last-of-type,
+  .queryWrapper div:first-of-type {
+    width: 80%;
+  }
+  .queryWrapper > div input {
+    max-width: 100%;
+    width: 100%;
+  }
+  .queryWrapper button {
+    padding: 10px 0;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

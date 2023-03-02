@@ -9,25 +9,25 @@ import styles from "./FilterButtons.module.css";
 const FilterButtons = () => {
   return (
     <div className={styles.filterWrapper}>
-      <Link href="/cars/filter/sedan">
+      <Link href="filter/sedan">
         <span>
           <Sedan />
         </span>
         <span>Sedan</span>
       </Link>
-      <Link href="/cars/filter/suv">
+      <Link href="filter/suv">
         <span>
           <Suv />
         </span>
         <span>SUV</span>
       </Link>
-      <Link href="/cars/filter/hatchback">
+      <Link href="filter/hatchback">
         <span>
           <Hatchback />
         </span>
         <span>Hatchback</span>
       </Link>
-      <Link href="/cars/filter/sport">
+      <Link href="filter/sport">
         <span>
           <Sport />
         </span>
